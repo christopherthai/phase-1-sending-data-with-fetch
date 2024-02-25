@@ -13,9 +13,9 @@ const submitData = (name, email) => {
   })
   .then((response) => response.json())
   .then((data) => {
-    document.body.innerHTML = data["id"]
+    document.querySelector('body').append(data["id"])
   })
   .catch((error) => {
-    document.body.innerHTML = error.message
+    document.querySelector('body').append(error.message)
   })
 }
